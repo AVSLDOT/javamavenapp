@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                git 'https://github.com/AVSLDOT/javamavenapp.git'
                 sh 'mvn -B -DskipTests clean package'
             }
         }
